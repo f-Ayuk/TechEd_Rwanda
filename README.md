@@ -1,2 +1,2 @@
 # TechEd_Rwanda
-Final Term Projecct
+Final Term Project
