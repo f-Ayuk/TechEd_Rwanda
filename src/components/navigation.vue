@@ -3,7 +3,7 @@
 <template>
   <nav class="navigation">
     <div class="nav_links">
-      <p>techEd Rwanda</p>
+      <RouterLink to="/">techEd rwanda</RouterLink>
       <div class="nav_links_wrapper">
         <a href="">all courses</a>
         <a href="">about us</a>
@@ -32,7 +32,7 @@
   margin: 12px 0;
   width: 96vw;
   border-radius: 36px;
-  z-index: 10000;
+  z-index: 100000000000000000000000;
   .nav_links {
     width: 40vw;
     display: flex;

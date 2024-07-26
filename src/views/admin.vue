@@ -1,5 +1,6 @@
 <script setup>
 import navigation from "@/components/navigation.vue";
+import studentavatar from "@/components/studentavatar.vue";
 </script>
 
 <template>
@@ -22,12 +23,12 @@ import navigation from "@/components/navigation.vue";
         <h1>our numbers</h1>
         <div class="admin_wrapper_reach_wrapper">
           <div class="reach_numbers">
-            <p>current teachers</p>
-            <p>x12</p>
+            <p class="title">current teachers</p>
+            <p class="number">x12</p>
           </div>
           <div class="reach_numbers">
-            <p>current students</p>
-            <p>x129</p>
+            <p class="title">current students</p>
+            <p class="number">x129</p>
           </div>
         </div>
       </div>
@@ -58,6 +59,32 @@ import navigation from "@/components/navigation.vue";
             <p>open video</p>
           </div>
         </div>
+      </div>
+      <!--  -->
+
+      <!-- students -->
+      <div class="admin_students">
+        <h1>current managing students</h1>
+        <studentavatar>
+          <template #student_name>MUKIZA EMA</template>
+          <template #student_grade>97%</template>
+          <template #student_course>Microsoft Office Suite</template>
+        </studentavatar>
+        <studentavatar>
+          <template #student_name>MUKIZA EMA</template>
+          <template #student_grade>97%</template>
+          <template #student_course>Microsoft Office Suite</template>
+        </studentavatar>
+        <studentavatar>
+          <template #student_name>MUKIZA EMA</template>
+          <template #student_grade>97%</template>
+          <template #student_course>Microsoft Office Suite</template>
+        </studentavatar>
+        <studentavatar>
+          <template #student_name>MUKIZA EMA</template>
+          <template #student_grade>97%</template>
+          <template #student_course>Microsoft Office Suite</template>
+        </studentavatar>
       </div>
       <!--  -->
     </div>
@@ -105,5 +132,107 @@ import navigation from "@/components/navigation.vue";
       text-transform: uppercase;
     }
   }
+
+  /*  */
+  .admin_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .admin_wrapper_reach {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      h1 {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: white;
+        padding-bottom: 4px;
+        border-bottom: 1px solid white;
+      }
+
+      .admin_wrapper_reach_wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+
+        .reach_numbers {
+          width: 230px;
+          height: 210px;
+          background-color: white;
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+
+          .title {
+            font-size: 14px;
+            text-transform: uppercase;
+          }
+
+          .number {
+            font-size: 56px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    /*  */
+    .admin_wrapper_re {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      h1 {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: white;
+        padding-bottom: 4px;
+        border-bottom: 1px solid white;
+      }
+
+      .admin_wrapper_reach_wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+
+        .reach_numbers {
+          width: 230px;
+          height: 210px;
+          background-color: white;
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+
+          p {
+            font-size: 14px;
+            color: black;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    /*  */
+  }
+
+  /*  */
+  .admin_students {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 4px;
+    border-top: 1px solid white;
+    h1 {
+      text-transform: uppercase;
+      font-size: 14px;
+      color: white;
+    }
+  }
+  /*  */
 }
 </style>

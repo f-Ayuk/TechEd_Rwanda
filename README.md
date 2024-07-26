@@ -22,7 +22,6 @@ pnpm install
 pnpm dev
 ```
 
-
 ### Compile and Minify for Production
 
 ```sh

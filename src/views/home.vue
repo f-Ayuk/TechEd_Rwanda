@@ -1,24 +1,30 @@
 <script setup>
-import navigation from '@/components/navigation.vue'
-import course from '@/components/course.vue'
-import contacts from '@/components/contacts.vue'
+import navigation from "@/components/navigation.vue";
+import course from "@/components/course.vue";
+import contacts from "@/components/contacts.vue";
 </script>
 
 <template>
   <navigation />
   <section class="home">
     <div class="home_index">
-      <div class="index_img img_1"></div>
-      <div class="index_img img_2"></div>
-      <div class="index_img img_3"></div>
-      <div class="index_img img_4"></div>
+      <img
+        src="../assets/photos/student&teacher.jpg"
+        alt=""
+        class="index_img img_1"
+      />
+      <img src="../assets/photos/home_1.jpg" alt="" class="index_img img_2" />
+      <img src="../assets/photos/home_3.jpg" alt="" class="index_img img_3" />
+      <img src="../assets/photos/home_4.jpg" alt="" class="index_img img_4" />
+
       <div class="index_heading">
         <h1>techEd Rwanda</h1>
         <h1>create your future in tech and coding</h1>
         <p>
-          Deliver dynamic learning experiences to every student, everywhere. Take teaching and
-          learning to the next level with teched, the #1 educational software, and the foundation of
-          the Instructure Learning Platform.
+          Deliver dynamic learning experiences to every student, everywhere.
+          Take teaching and learning to the next level with teched, the #1
+          educational software, and the foundation of the Instructure Learning
+          Platform.
         </p>
         <RouterLink to="/signup">get started</RouterLink>
       </div>
@@ -45,7 +51,9 @@ import contacts from '@/components/contacts.vue'
             </template>
           </course>
           <course>
-            <template #course_name> Internet Safety and Digital Citizenship</template>
+            <template #course_name>
+              Internet Safety and Digital Citizenship</template
+            >
             <template #course_img>
               <img src="../assets/photos/Basic Computer Literacy.png" alt="" />
             </template>
@@ -73,7 +81,10 @@ import contacts from '@/components/contacts.vue'
           <course>
             <template #course_name> Robotics and STEM Activities</template>
             <template #course_img>
-              <img src="../assets/photos/Robotics and STEM Activities.png" alt="" />
+              <img
+                src="../assets/photos/Robotics and STEM Activities.png"
+                alt=""
+              />
             </template>
           </course>
           <course>
@@ -85,7 +96,10 @@ import contacts from '@/components/contacts.vue'
           <course>
             <template #course_name> Educational Games and Simulations</template>
             <template #course_img>
-              <img src="../assets/photos/Educational Games and Simulations.png" alt="" />
+              <img
+                src="../assets/photos/Educational Games and Simulations.png"
+                alt=""
+              />
             </template>
           </course>
         </div>
@@ -99,7 +113,10 @@ import contacts from '@/components/contacts.vue'
           <course>
             <template #course_name> Introduction to Data Handling</template>
             <template #course_img>
-              <img src="../assets/photos/Introduction to Data Handling.png" alt="" />
+              <img
+                src="../assets/photos/Introduction to Data Handling.png"
+                alt=""
+              />
             </template>
           </course>
         </div>
@@ -118,16 +135,19 @@ import contacts from '@/components/contacts.vue'
           <p>#our mission #our values</p>
         </div>
         <p class="aboutus_mission">
-          s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book. It has survived not only five
-          centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-          It was popularised in the 1960s with the release of Letraset
+          s simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum has been the industry's standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and scrambled it
+          to make a type specimen book. It has survived not only five centuries,
+          but also the leap into electronic typesetting, remaining essentially
+          unchanged. It was popularised in the 1960s with the release of
+          Letraset
         </p>
         <p class="aboutus_values">
-          s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book. It has survived no
+          s simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum has been the industry's standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and scrambled it
+          to make a type specimen book. It has survived no
         </p>
       </div>
     </div>
@@ -152,6 +172,39 @@ import contacts from '@/components/contacts.vue'
     justify-content: flex-end;
     align-items: flex-start;
     height: 100vh;
+    padding: 0 72px;
+    position: relative;
+    overflow: hidden;
+
+    .index_img {
+      position: absolute;
+      border-radius: 50%;
+      width: 600px;
+      height: 600px;
+      object-fit: cover;
+    }
+    .img_1 {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      /* z-index: -1000; */
+      opacity: 0.9;
+    }
+
+    .img_2 {
+      top: -300px;
+      right: -200px;
+    }
+
+    .img_3 {
+      bottom: -245px;
+      left: -315px;
+    }
+
+    .img_4 {
+      bottom: -245px;
+      right: -315px;
+    }
 
     .index_heading {
       background-color: white;
@@ -161,6 +214,7 @@ import contacts from '@/components/contacts.vue'
       flex-direction: column;
       justify-content: space-between;
       padding: 24px 48px;
+      z-index: 10000;
     }
     /*  */
   }
@@ -170,6 +224,7 @@ import contacts from '@/components/contacts.vue'
     gap: 72px;
     justify-content: center;
     align-items: center;
+    padding: 0 72px;
 
     .courses_title {
       text-transform: uppercase;
