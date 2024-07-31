@@ -1,7 +1,3 @@
-Certainly! Here's the updated README for TechEd for Rwanda, reflecting the use of Python (Django) for the backend and SQLite for the database:
-
----
-
 # TechEd for Rwanda
 
 ## Overview
