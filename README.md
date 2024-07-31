@@ -1,4 +1,4 @@
-# TechEd for Rwanda Platform
+# TechEd for Rwanda
 
 ## Overview
 
