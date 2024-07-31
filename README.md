@@ -42,8 +42,8 @@ The TechEd for Rwanda Platform is a comprehensive online tool designed to provid
 - **Developed:** Platform prototype.
 - **Launched:** Pilot program in selected schools.
 - **Conducted:** Teacher training sessions.
-- **Currently:** Monitoring and evaluating pilot program effectiveness.
-- **Preparing for:** Full deployment phase.
+- **Conducted:** Monitoring and evaluating pilot program effectiveness.
+- **Deployed:** Full deployment phase.
 
 ### Milestones Achieved
 
