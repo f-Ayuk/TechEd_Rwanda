@@ -12,8 +12,8 @@ import contacts from "@/components/contacts.vue";
       <img src="../assets/photos/student&teacher.jpg" alt="Background Image" class="student_img" />
       <div class="avatar_wrapper">
         <div class="avatar">
-          <img src="../assets/photos/student.png" alt="Avatar" />
-          <p>Vanessa Mdee</p>
+          <img src="../assets/photos/M3N.jpg" alt="Avatar" />
+          <p>Hello, How are you doing today!</p>
         </div>
         <p class="grades">Overall Grades: 89%</p>
       </div>
