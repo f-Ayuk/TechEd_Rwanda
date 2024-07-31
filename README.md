@@ -1,3 +1,7 @@
+Certainly! Here's the updated README for TechEd for Rwanda, reflecting the use of Python (Django) for the backend and SQLite for the database:
+
+---
+
 # TechEd for Rwanda
 
 ## Overview
@@ -125,11 +129,11 @@ The TechEd for Rwanda Platform is a comprehensive online tool designed to provid
 
 We have used the following technologies and tools to build the TechEd for Rwanda platform:
 
-#### **1. Node.js**
+#### **1. Python (Django)**
 
-- **Description:** A JavaScript runtime built on Chrome's V8 JavaScript engine.
-- **Usage:** We used Node.js for server-side development to build scalable and high-performance backend services.
-- **Features:** Non-blocking I/O, event-driven architecture, and a rich ecosystem of packages via npm.
+- **Description:** A high-level Python web framework that encourages rapid development and clean, pragmatic design.
+- **Usage:** We used Django for server-side development to build scalable and high-performance backend services.
+- **Features:** Robust admin interface, ORM, and security features.
 
 #### **2. Vue.js**
 
@@ -137,11 +141,11 @@ We have used the following technologies and tools to build the TechEd for Rwanda
 - **Usage:** We employed Vue.js to develop the platform's frontend, creating interactive and responsive user interfaces.
 - **Features:** Reactive data binding, component-based architecture, and a comprehensive ecosystem of tools and libraries.
 
-#### **3. MongoDB**
+#### **3. SQLite**
 
-- **Description:** A NoSQL database designed for modern applications with flexible schema and scalability.
-- **Usage:** We used MongoDB to store and manage the platform’s data, including user information, progress tracking, and content.
-- **Features:** Document-oriented storage, scalability, and support for complex queries.
+- **Description:** A C library that provides a lightweight, disk-based database.
+- **Usage:** We used SQLite to store and manage the platform’s data, including user information, progress tracking, and content.
+- **Features:** Self-contained, serverless, and zero-configuration.
 
 #### **4. Visual Studio Code**
 
@@ -155,17 +159,11 @@ We have used the following technologies and tools to build the TechEd for Rwanda
 - **Usage:** We employed Figma to design and prototype the platform’s UI and interactive elements.
 - **Features:** Real-time collaboration, vector graphics, and prototyping.
 
-#### **6. Git**
+#### **6. GitHub**
 
 - **Description:** A version control system for tracking changes in source code.
-- **Usage:** We used Git for source code management and collaboration throughout the project.
+- **Usage:** We used GitHub for project source code management and collaboration.
 - **Features:** Branching, merging, and collaborative workflows.
-
-#### **7. Docker**
-
-- **Description:** A platform for developing and running container applications.
-- **Usage:** We utilized Docker to create consistent development and production environments through containerization.
-- **Features:** Container orchestration, environment consistency, and isolation.
 
 ---
 ## Future Work
@@ -231,3 +229,5 @@ We have used the following technologies and tools to build the TechEd for Rwanda
 ![iPhone-13-PRO-localhost](https://github.com/user-attachments/assets/6dc665c3-2109-4169-aebb-e9c285cc1672)
 ![iPad-Air-4-localhost](https://github.com/user-attachments/assets/266b15fc-1830-44dd-b253-958ea877d366)
 ![Macbook-Air-localhost](https://github.com/user-attachments/assets/57c32afb-27b2-47e4-bf3f-1b3e8a2a6a70)
+
+---
