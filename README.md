@@ -118,9 +118,6 @@ The TechEd for Rwanda Platform is a comprehensive online tool designed to provid
 - **Tasks:** Roll out to all target schools, provide ongoing support and establish a feedback loop.
 
 ---
-Certainly! Here’s the revised `README.md` section with the phrasing you requested:
-
----
 
 ## Development Tools
 
