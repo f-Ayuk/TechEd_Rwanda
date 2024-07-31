@@ -1,20 +1,56 @@
 <script setup>
+import { ref } from "vue";
+import { useRouter } from "vue-router"; // Import useRouter
 import navigation from "@/components/navigation.vue";
 import course from "@/components/course.vue";
 import contacts from "@/components/contacts.vue";
 import { RouterLink } from "vue-router";
+
+const email = ref("");
+const password = ref("");
+const router = useRouter(); // Initialize router
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const response = await fetch("http://127.0.0.1:8000/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: email.value,
+      password: password.value,
+    }),
+  });
+
+  if (response.ok) {
+    const data = await response.json(); // Assuming the backend returns user data
+
+    // Check the user's email and redirect accordingly
+    if (data.email === "j.mugisha1@super.com") {
+      this.$router.push("admin"); // Redirects to /new-route
+    } else {
+      router.push({ name: "student" }); // Navigate to student dashboard route
+    }
+  } else {
+    // Handle error (e.g., show an error message)
+    console.error("Login failed");
+  }
+};
 </script>
+
 <template>
   <section class="signup">
     <navigation class="z" />
     <div class="signup_content">
       <img src="../assets/photos/student&teacher.jpg" alt="Students and Teacher" class="signup_img" />
       <div class="signup_wrapper">
-        <h5>Welcome again, login to acess the dashboard</h5>
-        <form>
-          <input type="text" id="name" name="name" required placeholder=" Enter your email" />
-          <input type="password" id="password" name="password" required placeholder=" Enter your Password" />
-          <button type="submit"><RouterLink to="/student">Login</RouterLink></button>
+        <h5>Welcome again, login to access the dashboard</h5>
+        <form @submit="handleSubmit">
+          <input v-model="email" type="text" id="email" name="email" required placeholder="Enter your email" />
+          <input v-model="password" type="password" id="password" name="password" required placeholder="Enter your Password" />
+          <button type="submit">Login</button>
         </form>
       </div>
     </div>
@@ -69,7 +105,6 @@ import { RouterLink } from "vue-router";
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.1);
   z-index: 10001;
-
 }
 
 .signup_wrapper h5 {
