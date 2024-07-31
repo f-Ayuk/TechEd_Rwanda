@@ -1,4 +1,4 @@
-# TechEd for Rwanda Platform - README
+# TechEd for Rwanda Platform
 
 ## Overview
 
@@ -118,7 +118,59 @@ The TechEd for Rwanda Platform is a comprehensive online tool designed to provid
 - **Tasks:** Roll out to all target schools, provide ongoing support and establish a feedback loop.
 
 ---
+Certainly! Here’s the revised `README.md` section with the phrasing you requested:
 
+---
+
+## Development Tools
+
+### Integrated Development Environments (IDEs) and Tools
+
+We have used the following technologies and tools to build the TechEd for Rwanda platform:
+
+#### **1. Node.js**
+
+- **Description:** A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **Usage:** We used Node.js for server-side development to build scalable and high-performance backend services.
+- **Features:** Non-blocking I/O, event-driven architecture, and a rich ecosystem of packages via npm.
+
+#### **2. Vue.js**
+
+- **Description:** A progressive JavaScript framework for building user interfaces.
+- **Usage:** We employed Vue.js to develop the platform's frontend, creating interactive and responsive user interfaces.
+- **Features:** Reactive data binding, component-based architecture, and a comprehensive ecosystem of tools and libraries.
+
+#### **3. MongoDB**
+
+- **Description:** A NoSQL database designed for modern applications with flexible schema and scalability.
+- **Usage:** We used MongoDB to store and manage the platform’s data, including user information, progress tracking, and content.
+- **Features:** Document-oriented storage, scalability, and support for complex queries.
+
+#### **4. Visual Studio Code**
+
+- **Description:** A versatile code editor supporting various programming languages and extensions.
+- **Usage:** We used Visual Studio Code to write and debug code for both frontend and backend development.
+- **Features:** Syntax highlighting, integrated terminal, and debugging support.
+
+#### **5. Figma**
+
+- **Description:** A collaborative design tool for creating user interfaces and prototypes.
+- **Usage:** We employed Figma to design and prototype the platform’s UI and interactive elements.
+- **Features:** Real-time collaboration, vector graphics, and prototyping.
+
+#### **6. Git**
+
+- **Description:** A version control system for tracking changes in source code.
+- **Usage:** We used Git for source code management and collaboration throughout the project.
+- **Features:** Branching, merging, and collaborative workflows.
+
+#### **7. Docker**
+
+- **Description:** A platform for developing and running container applications.
+- **Usage:** We utilized Docker to create consistent development and production environments through containerization.
+- **Features:** Container orchestration, environment consistency, and isolation.
+
+---
 ## Future Work
 
 ### Post-Presentation Focus
@@ -178,6 +230,7 @@ The TechEd for Rwanda Platform is a comprehensive online tool designed to provid
 4. **Ongoing Maintenance:** Provide updates and support.
 
 ---
+## Responsiveness Interface
 ![iPhone-13-PRO-localhost](https://github.com/user-attachments/assets/6dc665c3-2109-4169-aebb-e9c285cc1672)
 ![iPad-Air-4-localhost](https://github.com/user-attachments/assets/266b15fc-1830-44dd-b253-958ea877d366)
 ![Macbook-Air-localhost](https://github.com/user-attachments/assets/57c32afb-27b2-47e4-bf3f-1b3e8a2a6a70)
