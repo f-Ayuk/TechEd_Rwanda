@@ -1,138 +1,10 @@
-<!-- <script setup>
-import { ref } from "vue";
-import { useRouter } from "vue-router"; // Import useRouter
-import navigation from "@/components/navigation.vue";
-import contacts from "@/components/contacts.vue";
-
-const email = ref("");
-const password = ref("");
-const router = useRouter(); // Initialize router
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  const response = await fetch("http://127.0.0.1:8000/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      email: email.value,
-      password: password.value,
-    }),
-  });
-
-  if (response.ok) {
-    // Handle successful login (e.g., redirect to the student dashboard)
-    console.log("Login successful");
-    router.push({ name: "student" }); // Navigate to student dashboard route
-  } else {
-    // Handle error (e.g., show an error message)
-    console.error("Login failed");
-  }
-};
-</script>
-
-<template>
-  <section class="signup">
-    <navigation class="z" />
-
-    <img src="../assets/photos/student&teacher.jpg" alt="" class="signup_img" />
-    <div class="signup_wrapper">
-      <h1>Sign up and start learning</h1>
-      <form @submit="handleSubmit">
-        <input
-          v-model="email"
-          type="text"
-          id="email"
-          name="email"
-          required
-          placeholder="email"
-        />
-
-        <input
-          v-model="password"
-          type="password"
-          id="password"
-          name="password"
-          required
-          placeholder="password"
-        />
-
-        <button type="submit">login</button>
-      </form>
-    </div>
-  </section>
-  <contacts />
-</template>
-
-<style scoped>
-.signup {
-  height: 100vh;
-  background-color: #10123b;
-  padding: 0 72px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.z {
-  z-index: 100000;
-}
-
-.signup_img {
-  position: absolute;
-  border-radius: 50%;
-  width: 600px;
-  height: 600px;
-  object-fit: cover;
-  bottom: -100px;
-  left: -100px;
-  z-index: 10000;
-}
-
-.signup_wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 50vw;
-  gap: 16px;
-
-  h1 {
-    font-size: 16px;
-    color: white;
-    text-transform: uppercase;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-
-    input {
-      padding: 24px 12px;
-      border: 1px solid white;
-      color: white;
-    }
-
-    button {
-      padding: 24px 12px;
-      text-align: center;
-      background-color: #a435f0;
-      color: white;
-      text-transform: uppercase;
-    }
-  }
-}
-</style> -->
-
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router"; // Import useRouter
 import navigation from "@/components/navigation.vue";
+import course from "@/components/course.vue";
 import contacts from "@/components/contacts.vue";
+import { RouterLink } from "vue-router";
 
 const email = ref("");
 const password = ref("");
@@ -157,7 +29,6 @@ const handleSubmit = async (e) => {
 
     // Check the user's email and redirect accordingly
     if (data.email === "j.mugisha1@super.com") {
-      // router.push({ name: "admin" }); // Redirect to admin route
       this.$router.push("admin"); // Redirects to /new-route
     } else {
       router.push({ name: "student" }); // Navigate to student dashboard route
@@ -172,94 +43,192 @@ const handleSubmit = async (e) => {
 <template>
   <section class="signup">
     <navigation class="z" />
-
-    <img src="../assets/photos/student&teacher.jpg" alt="" class="signup_img" />
-    <div class="signup_wrapper">
-      <h1>Sign up and start learning</h1>
-      <form @submit="handleSubmit">
-        <input
-          v-model="email"
-          type="text"
-          id="email"
-          name="email"
-          required
-          placeholder="email"
-        />
-
-        <input
-          v-model="password"
-          type="password"
-          id="password"
-          name="password"
-          required
-          placeholder="password"
-        />
-
-        <button type="submit">login</button>
-      </form>
+    <div class="signup_content">
+      <img src="../assets/photos/student&teacher.jpg" alt="Students and Teacher" class="signup_img" />
+      <div class="signup_wrapper">
+        <h5>Welcome again, login to access the dashboard</h5>
+        <form @submit="handleSubmit">
+          <input v-model="email" type="text" id="email" name="email" required placeholder="Enter your email" />
+          <input v-model="password" type="password" id="password" name="password" required placeholder="Enter your Password" />
+          <button type="submit">Login</button>
+        </form>
+      </div>
     </div>
   </section>
-  <contacts />
+  <contacts class="footer" />
 </template>
 
 <style scoped>
 .signup {
-  height: 100vh;
+  height: calc(100vh - 70px); /* Adjusted for space below the navigation bar */
+  max-width: 100%;
   background-color: #10123b;
-  padding: 0 72px;
+  padding: 0 2rem; /* Responsive padding */
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
+  margin-top: 80px; /* Space from the navigation bar */
 }
 
 .z {
   z-index: 100000;
 }
 
+.signup_content {
+  display: flex;
+  margin-top: 300px;
+  margin-bottom: 330px;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 9rem; /* Space between image and form */
+}
+
 .signup_img {
-  position: absolute;
   border-radius: 50%;
-  width: 600px;
-  height: 600px;
+  width: 40vw;
+  height: 40vw;
+  max-width: 600px;
+  max-height: 600px;
   object-fit: cover;
-  bottom: -100px;
-  left: -100px;
-  z-index: 10000;
+  z-index: 10001;
 }
 
 .signup_wrapper {
   display: flex;
   flex-direction: column;
-  width: 50vw;
-  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 10001;
+}
 
-  h1 {
-    font-size: 16px;
-    color: white;
-    text-transform: uppercase;
+.signup_wrapper h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #c67ff5;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.signup_wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.signup_wrapper p {
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.signup_wrapper input {
+  padding: 15px;
+  border: 1px solid white;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.signup_wrapper button {
+  padding: 12px;
+  text-align: center;
+  background-color: #a435f0;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.signup_wrapper button:hover {
+  background-color: #9334d7;
+  transform: translateY(-2px);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .signup {
+    padding: 0 1.5rem;
+    margin-top: 80px; /* Increased space for larger screens */
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  .signup_img {
+    width: 45vw;
+    height: 45vw;
+  }
 
-    input {
-      padding: 24px 12px;
-      border: 1px solid white;
-      color: white;
-    }
+  .signup_wrapper {
+    width: 80%;
+    padding: 1.5rem;
+    margin-bottom: 2rem; /* Adjusted space for larger screens */
+  }
 
-    button {
-      padding: 24px 12px;
-      text-align: center;
-      background-color: #a435f0;
-      color: white;
-      text-transform: uppercase;
-    }
+  .signup_wrapper h5 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup {
+    padding: 0 1rem;
+    margin-top: 90px; /* Increased space for medium screens */
+  }
+
+  .signup_img {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .signup_wrapper {
+    width: 85%;
+    padding: 1rem;
+    margin-bottom: 2rem; /* Adjusted space for medium screens */
+  }
+
+  .signup_wrapper h5 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup {
+    padding: 0 0.5rem;
+    margin-top: 100px; /* Increased space for smaller screens */
+  }
+
+  .signup_img {
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .signup_wrapper {
+    width: 95%;
+    padding: 0.5rem;
+    margin-bottom: 1rem; /* Adjusted space for smaller screens */
+  }
+
+  .signup_wrapper h5 {
+    font-size: 0.875rem;
+  }
+
+  .signup_wrapper input {
+    font-size: 0.875rem;
+    padding: 10px;
+  }
+
+  .signup_wrapper button {
+    font-size: 0.875rem;
+    padding: 10px;
   }
 }
 </style>

@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import { RouterLink } from 'vue-router';
+</script>
 
 <template>
   <div class="course">
@@ -6,7 +8,7 @@
       <slot name="course_name"></slot>
     </p>
     <slot name="course_img"></slot>
-    <!-- <a href="">available</a> -->
+    <RouterLink to="/signup" class="nav_login"><a href="">Enroll now</a></RouterLink>
   </div>
 </template>
 
@@ -26,6 +28,7 @@
     background-color: black;
     padding: 6px 12px;
     color: white;
+    cursor: pointer;
     width: fit-content;
     border-radius: 24px;
   }
