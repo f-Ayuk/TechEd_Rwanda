@@ -189,10 +189,10 @@ We have used the following technologies and tools to build the TechEd for Rwanda
 ### Contact Information
 
 - **Daniel Iryivuze:** [d.iryivuze@alustudent.com]
-- **Ayomide Samuel Aderoba:** [Email]
-- **Joel Karekezi Mugisha:** [Email]
-- **Favor Ekep-Obasi Ayuk:** [Email]
-- **Nhial Majok Riak Maketh:** [Email]
+- **Ayomide Samuel Aderoba:** [a.aderoba@alustudent.com]
+- **Joel Karekezi Mugisha:** [j.mugisha1@alustudent.com]
+- **Favor Ekep-Obasi Ayuk:** [f.ayuk@alustudent.com]
+- **Nhial Majok Riak Maketh:** [n.riak@alustudent.com]
 
 ---
 
